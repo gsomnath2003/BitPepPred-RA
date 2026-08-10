@@ -1013,7 +1013,7 @@ elif page == "📂 Batch Prediction":
                     "Bitterness Value (log1/T in M)",
                     "AD Status (Quant.)",
                     "Prediction Reliability"
-                ]] = np.nan
+                ]] = "Not Applicable"
                 # Create Output
                 final_output.index = range(1, len(final_output) + 1)
                 output = final_output
