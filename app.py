@@ -204,22 +204,6 @@ def peptide_desc_calculator(sequences: list):
         pep = peptides.Peptide(s)
         desc = pep.descriptors()
 
-        # Additional descriptors
-        desc["Aliphatic_index"] = pep.aliphatic_index()
-        desc["Instability_index"] = pep.instability_index()
-        desc["Net_charge_pH7"] = pep.charge(pH=7)
-        desc["Isoelectric_point"] = pep.isoelectric_point()
-        desc["Molecular_weight"] = pep.molecular_weight()
-        desc["Boman_index"] = pep.boman()
-        desc["GRAVY_index"] = pep.hydrophobicity()
-        desc["Entropy"] = pep.entropy()
-
-        # Add Polar / Nonpolar descriptors
-        polar, nonpolar = calculate_polarity(s)
-        desc["Polar_count"] = polar
-        desc["Nonpolar_count"] = nonpolar
-        all_desc.append(desc)
-
     df1 = pd.DataFrame(all_desc, index=sequences)
     return df1
 
