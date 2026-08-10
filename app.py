@@ -429,7 +429,7 @@ if page == "🏠 Home":
             font-weight:bold;
             box-shadow:0px 8px 20px rgba(0,0,0,.25);
         ">
-        🪄 Predict Query: individually or in Batch
+        ✨ Predict Query: individually or in Batch
         </h1>
     </div>
     """, unsafe_allow_html=True)
