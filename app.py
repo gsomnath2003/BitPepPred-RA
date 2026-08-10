@@ -18,7 +18,7 @@ import numpy as np
 import streamlit.components.v1 as components
 
 
-inps = joblib.load("assets\\inputs.joblib")
+inps = joblib.load("inputs.joblib")
 tr_r = inps[0]
 te_r = inps[1]
 tr_c = inps[2]
@@ -368,7 +368,7 @@ if background.exists():
     )
 
 # slidebar logo
-logo = Path("assets/logo.png")
+logo = Path("logo.png")
 if logo.exists():
     logo_base64 = get_base64(logo)
     st.sidebar.markdown(
@@ -411,7 +411,7 @@ st.sidebar.markdown(
 if page == "🏠 Home":
 
     #Banner
-    banner = Path("assets/banner.png")
+    banner = Path("banner.png")
     if banner.exists():
         st.image(str(banner), use_container_width=True)
     st.markdown("<br>", unsafe_allow_html=True)
