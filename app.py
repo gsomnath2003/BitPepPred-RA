@@ -434,8 +434,9 @@ if page == "🏠 Home":
     </div>
     """, unsafe_allow_html=True)
 
-    #Feature Cards
+   # Feature Cards
     col1, col2, col3, col4 = st.columns(4)
+
     with col1:
         st.markdown("""
         <div style="
@@ -443,15 +444,23 @@ if page == "🏠 Home":
             border:1px solid #C8EBD7;
             border-radius:18px;
             padding:20px;
-            height:220px;
+            min-height:220px;
+            height:auto;
+            box-sizing:border-box;
+            overflow-wrap:break-word;
+            word-break:normal;
             text-align:center;
             box-shadow:0 4px 12px rgba(0,0,0,.08);
         ">
             <div style="font-size:45px;">🎯</div>
-            <div style="font-size:22px; color: blue">Accurate Prediction</div>
-            <div style="font-size:16px; color: black">Similarity informed methodology with high accuracy, based on validated peptide data.</div>
+            <div style="font-size:22px; color:blue;">Accurate Prediction</div>
+            <div style="font-size:16px; color:black;">
+                Similarity-informed methodology with high accuracy,
+                based on validated peptide data.
+            </div>
         </div>
         """, unsafe_allow_html=True)
+
 
     with col2:
         st.markdown("""
@@ -460,15 +469,23 @@ if page == "🏠 Home":
             border:1px solid #C9DDFE;
             border-radius:18px;
             padding:20px;
-            height:220px;
+            min-height:220px;
+            height:auto;
+            box-sizing:border-box;
+            overflow-wrap:break-word;
+            word-break:normal;
             text-align:center;
             box-shadow:0 4px 12px rgba(0,0,0,.08);
         ">
             <div style="font-size:45px;">⚛️</div>
-            <div style="font-size:22px; color:blue">Read-Across Approach</div>
-            <div style="font-size:16px; color: black">Leverages information from similar peptids to predict bitterness of query peptide sequences.</div>
+            <div style="font-size:22px; color:blue;">Read-Across Approach</div>
+            <div style="font-size:16px; color:black;">
+                Leverages information from similar peptides to predict
+                bitterness of query peptide sequences.
+            </div>
         </div>
         """, unsafe_allow_html=True)
+
 
     with col3:
         st.markdown("""
@@ -477,15 +494,23 @@ if page == "🏠 Home":
             border:1px solid #F0D27B;
             border-radius:18px;
             padding:20px;
-            height:220px;
+            min-height:220px;
+            height:auto;
+            box-sizing:border-box;
+            overflow-wrap:break-word;
+            word-break:normal;
             text-align:center;
             box-shadow:0 4px 12px rgba(0,0,0,.08);
         ">
             <div style="font-size:45px;">🚀</div>
-            <div style="font-size:22px;color:blue">Fast & Reliable</div>
-            <div style="font-size:16px;color: black">Get prediction results with AD status within seconds to support your research and development.</div>
+            <div style="font-size:22px; color:blue;">Fast & Reliable</div>
+            <div style="font-size:16px; color:black;">
+                Get prediction results with AD status within seconds
+                to support your research and development.
+            </div>
         </div>
         """, unsafe_allow_html=True)
+
 
     with col4:
         st.markdown("""
@@ -494,17 +519,24 @@ if page == "🏠 Home":
             border:1px solid #D9C7FF;
             border-radius:18px;
             padding:20px;
-            height:220px;
+            min-height:220px;
+            height:auto;
+            box-sizing:border-box;
+            overflow-wrap:break-word;
+            word-break:normal;
             text-align:center;
             box-shadow:0 4px 12px rgba(0,0,0,.08);
         ">
             <div style="font-size:45px;">📥</div>
-            <div style="font-size:22px;color:blue">Export Results</div>
-            <div style="font-size:16px;color: black">Download and analyze your prediction results in Excel format for further analysis.</div>
+            <div style="font-size:22px; color:blue;">Export Results</div>
+            <div style="font-size:16px; color:black;">
+                Download and analyze your prediction results in Excel
+                format for further analysis.
+            </div>
         </div>
         """, unsafe_allow_html=True)
-    st.markdown("<br>", unsafe_allow_html=True)
 
+    st.markdown("<br>", unsafe_allow_html=True)
     #Footer
     st.markdown("""
     <div style="text-align:center;font-size:14px;color:#555;">
