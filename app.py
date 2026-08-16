@@ -384,7 +384,7 @@ else:
 
 # SIDEBAR
 page = st.sidebar.radio(
-"Navigation", [ "🏠 Home", "🧬 Single Prediction", "📂 Batch Prediction", "📊 Source and Test Set", "📖 User manual", "📧 Contact Us",]
+"Navigation", [ "🏠 Home", "🧬 Single Prediction", "📂 Batch Prediction", "📊 Source and Test Set", "📖 User Manual", "📧 Contact Us",]
 )
 st.sidebar.info(
     """
