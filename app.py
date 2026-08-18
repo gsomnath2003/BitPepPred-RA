@@ -1185,7 +1185,7 @@ elif page == "📊 Source and Test Set":
         )
 
 # User manual
-elif page == "📖 User manual":
+elif page == "📖 User Manual":
     st.title("📖 User Manual")
 
     st.markdown("""
