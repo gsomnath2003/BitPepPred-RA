@@ -75,7 +75,7 @@ def reliability_analysis(df1, df2, op=False):
     if op == True:
         c1 = selected_rasar_des["SD_Activity"] <= 0.75
         c2 = selected_rasar_des["g"] <= 0.40
-        c3 = selected_rasar_des["Avg_similarity"] = 0.85
+        c3 = selected_rasar_des["Avg_similarity"] >= 0.85
         c4 = selected_rasar_des["CV_similarity"] <= 0.05
         selected_rasar_des["Reliability"] = np.select(
                 [
