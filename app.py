@@ -75,7 +75,7 @@ def reliability_analysis(df1, df2, op=False):
     if op == True:
         c1 = selected_rasar_des["SD_Activity"] <= 0.75
         c2 = selected_rasar_des["g"] <= 0.40
-        c3 = selected_rasar_des["Avg_similarity"] >= 0.85
+        c3 = selected_rasar_des["Avg_similarity"] = 0.85
         c4 = selected_rasar_des["CV_similarity"] <= 0.05
         selected_rasar_des["Reliability"] = np.select(
                 [
@@ -1022,7 +1022,7 @@ elif page == "📂 Batch Prediction":
                 reg_pred_b = ra_pred(df1=tr_r, df2=reg_des_b).weighted_prediction(method="Euclidean Distance", ctc=10)
                 cls_pred_b = ra_pred(df1=tr_c, df2=cls_des_b).weighted_prediction(method="Gaussian Kernel", ctc=10)
                 cls_pred_b = pd.Series(
-                                    np.where(cls_pred_b > , "Bitter", "Non Bitter"),
+                                    np.where(cls_pred_b > 0.5, "Bitter", "Non Bitter"),
                                     index=cls_pred_b.index
                                 )
                 ecfp_te_b = ecfp4_calculator(all_seq)
