@@ -57,7 +57,7 @@ def ad_analysis(df1_des, df2_des):
     sort_val = data_sort(sim, id=df2_des.index)
     sort_val1 = sort_val.iloc[:,0]
     AD_category = pd.Series(
-            np.where(sort_val1 > 0.5, "Inside AD", "Outside AD"),
+            np.where(sort_val1 > 0.7, "Inside AD", "Outside AD"),
             index=sort_val1.index
         )
     return AD_category
@@ -339,7 +339,7 @@ section[data-testid="stSidebar"] .stCaption{
     width: 100% !important;
     max-width: none !important;
     padding-top: 1.2rem !important;
-    padding-bottom: 0.5rem !important;
+    padding-bottom: rem !important;
     padding-left: 2rem !important;
     padding-right: 2rem !important;
 }
@@ -721,7 +721,6 @@ elif page == "🧬 Single Prediction":
                     )
 
                 if cls_pred.iloc[0] >= 0.5:
-
                     row = s_reliability.iloc[0]
 
                     # Values
@@ -1023,7 +1022,7 @@ elif page == "📂 Batch Prediction":
                 reg_pred_b = ra_pred(df1=tr_r, df2=reg_des_b).weighted_prediction(method="Euclidean Distance", ctc=10)
                 cls_pred_b = ra_pred(df1=tr_c, df2=cls_des_b).weighted_prediction(method="Gaussian Kernel", ctc=10)
                 cls_pred_b = pd.Series(
-                                    np.where(cls_pred_b > 0.5, "Bitter", "Non Bitter"),
+                                    np.where(cls_pred_b > , "Bitter", "Non Bitter"),
                                     index=cls_pred_b.index
                                 )
                 ecfp_te_b = ecfp4_calculator(all_seq)
