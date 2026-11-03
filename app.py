@@ -1037,13 +1037,13 @@ elif page == "📂 Batch Prediction":
                 final_output["Sequence"] = all_seq
                 final_output["Predicted Class"] = cls_pred_b.values
                 final_output["AD Status (Class.)"] = ad_stat_cls_b.values
-                final_output["Bitterness Value (log1/T in M)"] = reg_pred_b.values
+                final_output["Predicted Bitterness (log1/T in M)"] = reg_pred_b.values
                 final_output["AD Status (Quant.)"] = ad_stat_reg_b.values
                 final_output["Prediction Reliability"] = b_reliability["Reliability"].values
                 mask = final_output["Predicted Class"] == "Non Bitter"
 
                 final_output.loc[mask, [
-                    "Bitterness Value (log1/T in M)",
+                    "Predicted Bitterness (log1/T in M)",
                     "AD Status (Quant.)",
                     "Prediction Reliability"
                 ]] = "Not Applicable"
