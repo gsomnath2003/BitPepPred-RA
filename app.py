@@ -665,7 +665,7 @@ elif page == "🧬 Single Prediction":
                     st.markdown(f"""
                     <div class="result-card">
                     <div class="result-title">
-                    Class predicted
+                    Predicted Class
                     </div>
                     <div class="result-value">
                     {prediction}
@@ -693,7 +693,7 @@ elif page == "🧬 Single Prediction":
                     st.markdown(f"""
                     <div class="result-card">
                     <div class="result-title">
-                    Bitterness value
+                    Predicted Bitterness (Log1/T in M)
                     </div>
                     <div class="result-value">
                     {bitterness_value}
