@@ -1194,7 +1194,7 @@ elif page == "📖 User Manual":
 Navigate to the <strong>Single Prediction</strong> page from the navigation panel. <strong>Enter a valid peptide sequence</strong> using the
 single-letter amino acid codes in the input box and click the
 <strong>Predict</strong> button. The server analyzes the submitted sequence and displays the
-predicted class, Applicability Domain (AD) status, predicted value, prediction
+predicted class, Applicability Domain (AD) status, predicted bitterness thresholds, prediction
 reliability, amino acid composition, and sequence statistics.
 </p>
 
@@ -1216,7 +1216,7 @@ The prediction results can be <strong>viewed on the screen</strong> and <strong>
 <p>
 After prediction, the server provides a comprehensive summary of the results for each submitted peptide.
 The <strong>Predicted Class</strong> indicates whether the peptide is classified as <strong>Bitter</strong> or
-<strong>Non Bitter</strong>. The <strong>Predicted Value</strong> represents the quantitative bitterness value (log1/T in M) of the peptides which are only bitter for the prediction model.
+<strong>Non Bitter</strong>. The <strong>Predicted Value</strong> represents the quantitative bitterness threshold (log1/T in M) of the peptides which are only bitter for the prediction model.
 The <strong>AD Status</strong> using the Tanimoto similarity, indicates whether the query peptide falls within the chemical and structural space covered by the sourse datapoints, thereby reflecting the reliability of the prediction. An outside AD prediction should be interpreted carefully.
 A <strong>Prediction Reliability</strong> (Very good/Good/Moderate/Bad) is also provided to indicate the confidence of the model in its prediction.
 For single-sequence predictions, the server additionally displays the amino acid composition and basic sequence statistics to facilitate further analysis.
