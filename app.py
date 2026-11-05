@@ -651,7 +651,7 @@ elif page == "🧬 Single Prediction":
                     ad_status1 = ad_stat_cls.iloc[0]
                     ad_status2 = ad_stat_reg.iloc[0]
                 else:
-                    prediction = "Non Bitter"
+                    prediction = "Non-bitter"
                     bitterness_value = "N/A"
                     ad_status1 = ad_stat_cls.iloc[0]
                     ad_status2 = "N/A"
@@ -1022,7 +1022,7 @@ elif page == "📂 Batch Prediction":
                 reg_pred_b = ra_pred(df1=tr_r, df2=reg_des_b).weighted_prediction(method="Euclidean Distance", ctc=10)
                 cls_pred_b = ra_pred(df1=tr_c, df2=cls_des_b).weighted_prediction(method="Gaussian Kernel", ctc=10)
                 cls_pred_b = pd.Series(
-                                    np.where(cls_pred_b > 0.5, "Bitter", "Non Bitter"),
+                                    np.where(cls_pred_b > 0.5, "Bitter", "Non-bitter"),
                                     index=cls_pred_b.index
                                 )
                 ecfp_te_b = ecfp4_calculator(all_seq)
@@ -1040,7 +1040,7 @@ elif page == "📂 Batch Prediction":
                 final_output["Predicted Bitterness (log1/T in M)"] = reg_pred_b.values
                 final_output["AD Status (Quant.)"] = ad_stat_reg_b.values
                 final_output["Prediction Reliability"] = b_reliability["Reliability"].values
-                mask = final_output["Predicted Class"] == "Non Bitter"
+                mask = final_output["Predicted Class"] == "Non-bitter"
 
                 final_output.loc[mask, [
                     "Predicted Bitterness (log1/T in M)",
@@ -1216,7 +1216,7 @@ The prediction results can be <strong>viewed on the screen</strong> and <strong>
 <p>
 After prediction, the server provides a comprehensive summary of the results for each submitted peptide.
 The <strong>Predicted Class</strong> indicates whether the peptide is classified as <strong>Bitter</strong> or
-<strong>Non Bitter</strong>. The <strong>Predicted Value</strong> represents the quantitative bitterness threshold (log1/T in M) of the peptides which are only bitter for the prediction model.
+<strong>Non-bitter</strong>. The <strong>Predicted Value</strong> represents the quantitative bitterness threshold (log1/T in M) of the peptides which are only bitter for the prediction model.
 The <strong>AD Status</strong> using the Tanimoto similarity, indicates whether the query peptide falls within the chemical and structural space covered by the sourse datapoints, thereby reflecting the reliability of the prediction. An outside AD prediction should be interpreted carefully.
 A <strong>Prediction Reliability</strong> (Very good/Good/Moderate/Bad) is also provided to indicate the confidence of the model in its prediction.
 For single-sequence predictions, the server additionally displays the amino acid composition and basic sequence statistics to facilitate further analysis.
