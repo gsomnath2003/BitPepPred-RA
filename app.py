@@ -389,7 +389,7 @@ page = st.sidebar.radio(
 st.sidebar.info(
     """
     **Cite Us**  
-    *Pore & Roy., Computational and Structural Biotechnology Journal. 2025 Jul 17.*
+    *Ghosh S, Pore S, Roy K., Food Research International. 2026; 121259.*
     """
 )
 
