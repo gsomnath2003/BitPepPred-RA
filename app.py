@@ -389,7 +389,7 @@ page = st.sidebar.radio(
 st.sidebar.info(
     """
     **Cite Us**  
-    *Ghosh S, Pore S, Roy K., Food Research International. 2026; 121259.*
+    *Ghosh S, Pore S, Roy K., Food Research International. 2027; 247(1):121259*
     """
 )
 
